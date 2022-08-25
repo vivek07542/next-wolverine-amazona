@@ -5,6 +5,8 @@ import { Store } from '../utils/Store';
 import Image from 'next/image';
 import { XCircleIcon } from '@heroicons/react/outline';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
+// To render Cart Page only on Client Side.
 
 const CartScreen = () => {
   const { state, dispatch } = useContext(Store);
@@ -105,4 +107,4 @@ const CartScreen = () => {
   );
 };
 
-export default CartScreen;
+export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });

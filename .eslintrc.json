@@ -1,3 +1,5 @@
 {
+  "env": { "browser": true, "node": true, "es6": true },
+  // To get rid of Eslint error for promise
   "extends": ["eslint:recommended", "next/core-web-vitals"]
 }
