@@ -30,3 +30,8 @@
    4. add router
    5. create store provider
    6. handle add to cart button
+9. Create Cart Page
+   1. Create cart.js
+   2. useContext to get cart Items
+   3. List Items in Cart Item
+   4. Redirect to cart screen after add to cart
