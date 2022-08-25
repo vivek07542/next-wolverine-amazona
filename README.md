@@ -35,3 +35,6 @@
    2. useContext to get cart Items
    3. List Items in Cart Item
    4. Redirect to cart screen after add to cart
+10. Handle Changing Cart Items
+    1. add select box for quantity
+    2. handle select box change
