@@ -39,5 +39,11 @@
     1. add select box for quantity
     2. handle select box change
 11. Save Cart Items
+
     1. Install js-cookie package
     2. Save and retrieve Cart Item In Cookies
+
+12. Create Login Form
+    1. Install React Hook Form
+    2. Create Input Boxes
+    3. Add Login Button

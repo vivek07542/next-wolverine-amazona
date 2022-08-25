@@ -36,7 +36,7 @@ export default function Layout({ title, children }) {
                   )}
                 </a>
               </Link>
-              <Link href="/cart">
+              <Link href="/login">
                 <a className="p-2">Login</a>
               </Link>
             </div>

@@ -93,7 +93,8 @@ const CartScreen = () => {
               </li>
               <li>
                 <button
-                  onClick={() => router.push('/shipping')}
+                  onClick={() => router.push('login?redirect=/shipping')}
+                  // Authentication to the user first by going to login page if auth is true and redirect to shipping page
                   className="primary-button w-full"
                 >
                   Check Out
