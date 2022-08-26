@@ -44,6 +44,13 @@
     2. Save and retrieve Cart Item In Cookies
 
 12. Create Login Form
+
     1. Install React Hook Form
     2. Create Input Boxes
     3. Add Login Button
+
+13. Connect To MongoDB
+    1. Install MongoDB
+    2. Install MongoDB or Use Mongo Atlas
+    3. Save Connection url in .env file
+    4. create sample users
