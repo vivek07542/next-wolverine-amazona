@@ -54,3 +54,8 @@
     2. Install MongoDB or Use Mongo Atlas
     3. Save Connection url in .env file
     4. create sample users
+14. Create Login API
+    1. Install next-auth & react-toastify
+    2. create next auth.js
+    3. implement sign in
+    4. use sign in login form
