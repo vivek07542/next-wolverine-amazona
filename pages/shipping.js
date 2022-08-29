@@ -28,12 +28,10 @@ export default function ShippingScreen() {
   }, [setValue, shippingAddress]);
 
   const submitHandler = ({ fullName, address, city, postalCode, country }) => {
-     //   1. Update the Address in the Store =>cart => cart.shippingAddress
     dispatch({
       type: 'SAVE_SHIPPING_ADDRESS',
       payload: { fullName, address, city, postalCode, country },
     });
-    // 2. Update the Address in Cart of Local Storage
     Cookies.set(
       'cart',
       JSON.stringify({
@@ -47,20 +45,17 @@ export default function ShippingScreen() {
         },
       })
     );
-      // Push The Detail Next to Payment Page.
+
     router.push('/payment');
   };
 
   return (
     <Layout title="Shipping Address">
-         {/* Check out wizard is a component that we need to create to show the checkout wizard at the beginning of very much first screen */}
       <CheckoutWizard activeStep={1} />
-       {/* Create A Form */}
       <form
         className="mx-auto max-w-screen-md"
         onSubmit={handleSubmit(submitHandler)}
       >
-        {/* Title For Shipping Address */}
         <h1 className="mb-4 text-xl">Shipping Address</h1>
         <div className="mb-4">
           <label htmlFor="fullName">Full Name</label>

@@ -68,3 +68,6 @@
 16. Create Shipping Screen
     1. Display Address Fields
     2. Save Address In Contact.
+17. Payment Method
+    1. Display Payment Method
+    2. Save Payment Method in Context.
