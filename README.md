@@ -71,3 +71,7 @@
 17. Payment Method
     1. Display Payment Method
     2. Save Payment Method in Context.
+18. Seed Sample Products
+    1. Insert sample product to mongoDB
+    2. Load Products from db in home and product screen.
+    3. Check Product Count in Stock in Add to cart
