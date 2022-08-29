@@ -65,3 +65,6 @@
     1. Check User Authentication
     2. Install Headless ui (https://headlessui.com/)
     3. Show user menu
+16. Create Shipping Screen
+    1. Display Address Fields
+    2. Save Address In Contact.
