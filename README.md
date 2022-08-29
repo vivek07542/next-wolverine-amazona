@@ -55,7 +55,13 @@
     3. Save Connection url in .env file
     4. create sample users
 14. Create Login API
+
     1. Install next-auth & react-toastify
     2. create next auth.js
     3. implement sign in
     4. use sign in login form
+
+15. Add User Menu - (profile)
+    1. Check User Authentication
+    2. Install Headless ui (https://headlessui.com/)
+    3. Show user menu
