@@ -7,34 +7,22 @@ import { getError } from '../utils/error';
 function reducer(state, action) {
   switch (action.type) {
     case 'FETCH_REQUEST':
-      return {
-        ...state,
-        loading: true,
-        error: '',
-      };
+      return { ...state, loading: true, error: '' };
     case 'FETCH_SUCCESS':
-      return {
-        ...state,
-        loading: false,
-        orders: action.payload,
-        error: '',
-      };
+      return { ...state, loading: false, orders: action.payload, error: '' };
     case 'FETCH_FAIL':
-      return {
-        ...state,
-        loading: false,
-        error: action.payload,
-      };
+      return { ...state, loading: false, error: action.payload };
     default:
-      state;
+      return state;
   }
 }
-const OrderHistoryScreen = () => {
+function OrderHistoryScreen() {
   const [{ loading, error, orders }, dispatch] = useReducer(reducer, {
     loading: true,
     orders: [],
     error: '',
   });
+
   useEffect(() => {
     const fetchOrders = async () => {
       try {
@@ -60,32 +48,31 @@ const OrderHistoryScreen = () => {
             <thead className="border-b">
               <tr>
                 <th className="px-5 text-left">ID</th>
-                <th className="px-5 text-left">DATE</th>
-                <th className="px-5 text-left">TOTAL</th>
-                <th className="px-5 text-left">PAID</th>
-                <th className="px-5 text-left">DELIVERED</th>
-                <th className="px-5 text-left">ACTION</th>
+                <th className="p-5 text-left">DATE</th>
+                <th className="p-5 text-left">TOTAL</th>
+                <th className="p-5 text-left">PAID</th>
+                <th className="p-5 text-left">DELIVERED</th>
+                <th className="p-5 text-left">ACTION</th>
               </tr>
             </thead>
             <tbody>
               {orders.map((order) => (
-                <tr className="border-b" key={order._id}>
-                  <td className="p-5">{order._id.substring(20, 24)}</td>
-                  <td className="p-5">{order.createdAt.substring(0, 10)}</td>
-                  <td className="p-5">{order.totalPrice}</td>
-                  <td className="p-5">
+                <tr key={order._id} className="border-b">
+                  <td className=" p-5 ">{order._id.substring(20, 24)}</td>
+                  <td className=" p-5 ">{order.createdAt.substring(0, 10)}</td>
+                  <td className=" p-5 ">${order.totalPrice}</td>
+                  <td className=" p-5 ">
                     {order.isPaid
                       ? `${order.paidAt.substring(0, 10)}`
-                      : 'Not Paid'}
+                      : 'not paid'}
                   </td>
-                  <td className="p-5">
+                  <td className=" p-5 ">
                     {order.isDelivered
                       ? `${order.deliveredAt.substring(0, 10)}`
-                      : 'Not Delivered'}
+                      : 'not delivered'}
                   </td>
-                  <td className="p-5">
+                  <td className=" p-5 ">
                     <Link href={`/order/${order._id}`} passHref>
-                      {' '}
                       <a>Details</a>
                     </Link>
                   </td>
@@ -97,6 +84,7 @@ const OrderHistoryScreen = () => {
       )}
     </Layout>
   );
-};
+}
+
 OrderHistoryScreen.auth = true;
 export default OrderHistoryScreen;
