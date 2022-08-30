@@ -84,3 +84,7 @@
     2. Display Payment Method
     3. Display Order Items
     4. Implement Crete Order
+21. Create Order Screen => 19 No. Commit
+    1. Implement Backend APi for Order Detail
+    2. Load Order Data from Backend
+    3. Display Order Details
