@@ -19,6 +19,7 @@ export default function ProductScreen(props) {
   // const product = data.products.find((x) => x.slug === slug);
   // const { slug } = query;
   // const { query } = useRouter();
+
   if (!product) {
     return <Layout title="Product Not Found">Product Not Found</Layout>;
   }
@@ -26,7 +27,6 @@ export default function ProductScreen(props) {
     const existItem = state.cart.cartItems.find((x) => x.slug === product.slug);
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/products/${product._id}`);
-
     if (data.countInStock < quantity) {
       return toast.error('Sorry. Product is out of stock');
     }
@@ -87,7 +87,7 @@ export async function getServerSideProps(context) {
   await db.disconnect();
   return {
     props: {
-      products: product ? db.convertDocToObj(product) : null,
+      product: product ? db.convertDocToObj(product) : null,
     },
   };
 }

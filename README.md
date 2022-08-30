@@ -79,3 +79,8 @@
     1. Load Products in Home Page from MongoDB.
     2. Load Products in Product Page from MongoDB.
     3. Use Product Api to check count in stock in add to cart.
+20. Place Order Screen => 18 No. Commit
+    1. Display Shipping Address
+    2. Display Payment Method
+    3. Display Order Items
+    4. Implement Crete Order
