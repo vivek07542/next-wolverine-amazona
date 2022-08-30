@@ -92,3 +92,8 @@
     1. Add Signup Api
     2. Create Register API
     3. Call api on form submit.
+23. Pay Order By PayPal => 21 No. Commit
+    1. Add Paypal Button
+    2. Handle Payment
+    3. Create Backend API
+    4. Update Order State.
